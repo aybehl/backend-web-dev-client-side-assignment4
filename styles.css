@@ -1,3 +1,42 @@
-﻿body
-{
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.labelWithInput {
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="date"] {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: dimgray;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+.propertyName {
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+#successResponse {
+    color: green;
+    margin-top: 8px;
+    display: none;
+}
+
+#errorResponse {
+    color: red;
+    margin-top: 8px;
+    display: none;
 }

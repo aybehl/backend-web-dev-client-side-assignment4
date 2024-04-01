@@ -7,7 +7,46 @@
     <title>Add a Teacher</title>
 </head>
 <body>
-    
+    <h2>Add a Teacher</h2>
+    <div>
+        <form name="add_teacher_form" >
+            <div class="labelWithInput">
+                <label for="firstName" class="propertyName">First Name</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Enter first name" required/>
+            </div>
+
+            <div class="labelWithInput">
+                <label for="lastName" class="propertyName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Enter last name" required />
+            </div>
+
+            <div class="labelWithInput">
+                <label for="hireDate" class="propertyName">Hire Date</label>
+                <input type="date" name="hireDate" id="hireDate" value="" placeholder="Enter hire date" />
+            </div>
+
+            <div class="labelWithInput">
+                <label for="employeeNumber" class="propertyName">Employee Number</label>
+                <input type="text" name="employeeNumber" id="employeeNumber" value="" placeholder="Enter employee number" pattern="^T\d{3}$" title="Input must be in the format T followed by 3 digits. For example, T123." />
+            </div>
+
+            <div class="labelWithInput">
+                <label for="salary" class="propertyName">Salary</label>
+                <input type="text" name="salary" id="salary" value="" placeholder="Enter salary" pattern="^\d+(\.\d{0,2})?$" title="Please enter a valid salary amount. Example: 50 or 50.12"/>
+            </div>
+
+            <button type="submit" class="button">Add Teacher</button>
+        </form>
+    </div>
+
+    <div id="successResponse">
+        New Teacher Added Successfully
+    </div>
+
+    <div id="errorResponse">
+        New Teacher Could not be added
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
