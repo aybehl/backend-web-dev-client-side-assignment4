@@ -30,11 +30,11 @@ function sendRequestToServerToAddTeacher(event){
 
     //Collect form data
     let teacherData = {
-        teacherfname: addFormHandle.firstName.value,
-        teacherlname: addFormHandle.lastName.value,
-        salary: addFormHandle.salary.value,
-        employeenumber: addFormHandle.employeeNumber.value,
-        hiredate: addFormHandle.hireDate.value
+        teacherfname: addFormHandle.addFirstName.value,
+        teacherlname: addFormHandle.addLastName.value,
+        salary: addFormHandle.addSalary.value,
+        employeenumber: addFormHandle.addEmployeeNumber.value,
+        hiredate: addFormHandle.addHireDate.value
     }
 
     console.log(teacherData);
@@ -49,12 +49,12 @@ function sendRequestToServerToAddTeacher(event){
             //On success, show success Response
             if(xhr.status === 200) {
                 console.log("success", xhr.responseText);
-                let successResponse = document.getElementById("successResponse");
+                let successResponse = document.getElementById("addSuccessResponse");
                 successResponse.style.display = 'block';
             } else { 
                 //On error, show error Response
                 console.log("Error from server", xhr.responseText);
-                let errorResponse = document.getElementById("errorResponse");
+                let errorResponse = document.getElementById("addErrorResponse");
                 errorResponse.style.display = 'block';
             }
         }
@@ -69,12 +69,12 @@ function sendRequestToServerToUpdateTeacher(event) {
 
     //Collect form data
     let teacherData = {
-        teacherid: updateFormHandle.teacherid.value;
-        teacherfname: updateFormHandle.firstName.value,
-        teacherlname: updateFormHandle.lastName.value,
-        salary: updateFormHandle.salary.value,
-        employeenumber: updateFormHandle.employeeNumber.value,
-        hiredate: updateFormHandle.hireDate.value
+        teacherid: updateFormHandle.teacherId.value,
+        teacherfname: updateFormHandle.updateFirstName.value,
+        teacherlname: updateFormHandle.updateLastName.value,
+        salary: updateFormHandle.updateSalary.value,
+        employeenumber: updateFormHandle.updateEmployeeNumber.value,
+        hiredate: updateFormHandle.updateHireDate.value
     }
 
     console.log(teacherData);
@@ -89,12 +89,12 @@ function sendRequestToServerToUpdateTeacher(event) {
             //On success, show success Response
             if (xhr.status === 200) {
                 console.log("success", xhr.responseText);
-                let successResponse = document.getElementById("successResponse");
+                let successResponse = document.getElementById("updateSuccessResponse");
                 successResponse.style.display = 'block';
             } else {
                 //On error, show error Response
                 console.log("Error from server", xhr.responseText);
-                let errorResponse = document.getElementById("errorResponse");
+                let errorResponse = document.getElementById("updateErrorResponse");
                 errorResponse.style.display = 'block';
             }
         }
